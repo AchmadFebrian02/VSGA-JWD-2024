@@ -1,5 +1,5 @@
 <!-- 
-Nama Progam : Tugas menghitung jumlah dorm
+Nama Progam : Tugas menghitung jumlah Form
 Versi 1.0.0
 Penulis : Faris Achmad JWD
 Deskripsi : TUGAS MENGHITUNG JUMLAH total FORM PEMESANAN melalui yang di input
@@ -50,20 +50,21 @@ Deskripsi : TUGAS MENGHITUNG JUMLAH total FORM PEMESANAN melalui yang di input
 <script>
 $(document).ready(function(){
     $("#tambah").click(function(){  
-    var totalBelanja = 0;
-    var harga = [10000, 12000, 2000, 3000];
+        var totalBelanja = 0;
+        var harga = [10000, 12000, 2000, 3000];
 
         for(var i = 1; i <= 4; i++) {
-            var qty = parseInt($("#qty" + 1).val());
+            var qty = parseInt($("#qty" + i).val());
             if(!isNaN(qty) && qty > 0){
                 totalBelanja += qty * harga[i - 1];
             }
         }
 
-        $("#total-belanja").text("RP"+ totalBelanja);
+        $("#total-belanja").text("Rp" + totalBelanja);
     });
 });
 </script>
 </body>
 </html>
+
 
